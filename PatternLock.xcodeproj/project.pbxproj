@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9025E53C167ACE980014E161 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9025E53B167ACE980014E161 /* UIKit.framework */; };
+		9025E53E167ACE980014E161 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9025E53D167ACE980014E161 /* Foundation.framework */; };
+		9025E540167ACE980014E161 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9025E53F167ACE980014E161 /* CoreGraphics.framework */; };
+		9025E546167ACE980014E161 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9025E544167ACE980014E161 /* InfoPlist.strings */; };
+		9025E548167ACE980014E161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E547167ACE980014E161 /* main.m */; };
+		9025E54C167ACE980014E161 /* SPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E54B167ACE980014E161 /* SPAppDelegate.m */; };
+		9025E54E167ACE980014E161 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9025E54D167ACE980014E161 /* Default.png */; };
+		9025E550167ACE980014E161 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9025E54F167ACE980014E161 /* Default@2x.png */; };
+		9025E552167ACE980014E161 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9025E551167ACE980014E161 /* Default-568h@2x.png */; };
+		9025E555167ACE980014E161 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E554167ACE980014E161 /* SPViewController.m */; };
+		9025E558167ACE980014E161 /* SPViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9025E556167ACE980014E161 /* SPViewController_iPhone.xib */; };
+		9025E55B167ACE980014E161 /* SPViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9025E559167ACE980014E161 /* SPViewController_iPad.xib */; };
+		9025E562167ACEA50014E161 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9025E561167ACEA50014E161 /* QuartzCore.framework */; };
+		9025E579167ACF050014E161 /* NormalCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E572167ACF050014E161 /* NormalCircle.m */; };
+		9025E57A167ACF050014E161 /* SPLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E574167ACF050014E161 /* SPLine.m */; };
+		9025E57B167ACF050014E161 /* SPLockOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E576167ACF050014E161 /* SPLockOverlay.m */; };
+		9025E57C167ACF050014E161 /* SPLockScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E578167ACF050014E161 /* SPLockScreen.m */; };
+		9025E582167AD01C0014E161 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9025E581167AD01C0014E161 /* TestViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9025E537167ACE980014E161 /* PatternLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9025E53B167ACE980014E161 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9025E53D167ACE980014E161 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9025E53F167ACE980014E161 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9025E543167ACE980014E161 /* PatternLock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PatternLock-Info.plist"; sourceTree = "<group>"; };
+		9025E545167ACE980014E161 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9025E547167ACE980014E161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9025E549167ACE980014E161 /* PatternLock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PatternLock-Prefix.pch"; sourceTree = "<group>"; };
+		9025E54A167ACE980014E161 /* SPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAppDelegate.h; sourceTree = "<group>"; };
+		9025E54B167ACE980014E161 /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
+		9025E54D167ACE980014E161 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9025E54F167ACE980014E161 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9025E551167ACE980014E161 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9025E553167ACE980014E161 /* SPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPViewController.h; sourceTree = "<group>"; };
+		9025E554167ACE980014E161 /* SPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPViewController.m; sourceTree = "<group>"; };
+		9025E557167ACE980014E161 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPViewController_iPhone.xib; sourceTree = "<group>"; };
+		9025E55A167ACE980014E161 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SPViewController_iPad.xib; sourceTree = "<group>"; };
+		9025E561167ACEA50014E161 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9025E571167ACF050014E161 /* NormalCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalCircle.h; sourceTree = "<group>"; };
+		9025E572167ACF050014E161 /* NormalCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalCircle.m; sourceTree = "<group>"; };
+		9025E573167ACF050014E161 /* SPLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLine.h; sourceTree = "<group>"; };
+		9025E574167ACF050014E161 /* SPLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLine.m; sourceTree = "<group>"; };
+		9025E575167ACF050014E161 /* SPLockOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLockOverlay.h; sourceTree = "<group>"; };
+		9025E576167ACF050014E161 /* SPLockOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLockOverlay.m; sourceTree = "<group>"; };
+		9025E577167ACF050014E161 /* SPLockScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLockScreen.h; sourceTree = "<group>"; };
+		9025E578167ACF050014E161 /* SPLockScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLockScreen.m; sourceTree = "<group>"; };
+		9025E580167AD01C0014E161 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		9025E581167AD01C0014E161 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9025E534167ACE980014E161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9025E562167ACEA50014E161 /* QuartzCore.framework in Frameworks */,
+				9025E53C167ACE980014E161 /* UIKit.framework in Frameworks */,
+				9025E53E167ACE980014E161 /* Foundation.framework in Frameworks */,
+				9025E540167ACE980014E161 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9025E52C167ACE970014E161 = {
+			isa = PBXGroup;
+			children = (
+				9025E570167ACF050014E161 /* SPLockScreen */,
+				9025E541167ACE980014E161 /* PatternLock */,
+				9025E53A167ACE980014E161 /* Frameworks */,
+				9025E538167ACE980014E161 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9025E538167ACE980014E161 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9025E537167ACE980014E161 /* PatternLock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9025E53A167ACE980014E161 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9025E561167ACEA50014E161 /* QuartzCore.framework */,
+				9025E53B167ACE980014E161 /* UIKit.framework */,
+				9025E53D167ACE980014E161 /* Foundation.framework */,
+				9025E53F167ACE980014E161 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9025E541167ACE980014E161 /* PatternLock */ = {
+			isa = PBXGroup;
+			children = (
+				9025E580167AD01C0014E161 /* TestViewController.h */,
+				9025E581167AD01C0014E161 /* TestViewController.m */,
+				9025E54A167ACE980014E161 /* SPAppDelegate.h */,
+				9025E54B167ACE980014E161 /* SPAppDelegate.m */,
+				9025E553167ACE980014E161 /* SPViewController.h */,
+				9025E554167ACE980014E161 /* SPViewController.m */,
+				9025E556167ACE980014E161 /* SPViewController_iPhone.xib */,
+				9025E559167ACE980014E161 /* SPViewController_iPad.xib */,
+				9025E542167ACE980014E161 /* Supporting Files */,
+			);
+			path = PatternLock;
+			sourceTree = "<group>";
+		};
+		9025E542167ACE980014E161 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9025E543167ACE980014E161 /* PatternLock-Info.plist */,
+				9025E544167ACE980014E161 /* InfoPlist.strings */,
+				9025E547167ACE980014E161 /* main.m */,
+				9025E549167ACE980014E161 /* PatternLock-Prefix.pch */,
+				9025E54D167ACE980014E161 /* Default.png */,
+				9025E54F167ACE980014E161 /* Default@2x.png */,
+				9025E551167ACE980014E161 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9025E570167ACF050014E161 /* SPLockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9025E571167ACF050014E161 /* NormalCircle.h */,
+				9025E572167ACF050014E161 /* NormalCircle.m */,
+				9025E573167ACF050014E161 /* SPLine.h */,
+				9025E574167ACF050014E161 /* SPLine.m */,
+				9025E575167ACF050014E161 /* SPLockOverlay.h */,
+				9025E576167ACF050014E161 /* SPLockOverlay.m */,
+				9025E577167ACF050014E161 /* SPLockScreen.h */,
+				9025E578167ACF050014E161 /* SPLockScreen.m */,
+			);
+			path = SPLockScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9025E536167ACE980014E161 /* PatternLock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9025E55E167ACE980014E161 /* Build configuration list for PBXNativeTarget "PatternLock" */;
+			buildPhases = (
+				9025E533167ACE980014E161 /* Sources */,
+				9025E534167ACE980014E161 /* Frameworks */,
+				9025E535167ACE980014E161 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PatternLock;
+			productName = PatternLock;
+			productReference = 9025E537167ACE980014E161 /* PatternLock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9025E52E167ACE970014E161 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SP;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Suraj;
+			};
+			buildConfigurationList = 9025E531167ACE970014E161 /* Build configuration list for PBXProject "PatternLock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9025E52C167ACE970014E161;
+			productRefGroup = 9025E538167ACE980014E161 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9025E536167ACE980014E161 /* PatternLock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9025E535167ACE980014E161 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9025E546167ACE980014E161 /* InfoPlist.strings in Resources */,
+				9025E54E167ACE980014E161 /* Default.png in Resources */,
+				9025E550167ACE980014E161 /* Default@2x.png in Resources */,
+				9025E552167ACE980014E161 /* Default-568h@2x.png in Resources */,
+				9025E558167ACE980014E161 /* SPViewController_iPhone.xib in Resources */,
+				9025E55B167ACE980014E161 /* SPViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9025E533167ACE980014E161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9025E548167ACE980014E161 /* main.m in Sources */,
+				9025E54C167ACE980014E161 /* SPAppDelegate.m in Sources */,
+				9025E555167ACE980014E161 /* SPViewController.m in Sources */,
+				9025E579167ACF050014E161 /* NormalCircle.m in Sources */,
+				9025E57A167ACF050014E161 /* SPLine.m in Sources */,
+				9025E57B167ACF050014E161 /* SPLockOverlay.m in Sources */,
+				9025E57C167ACF050014E161 /* SPLockScreen.m in Sources */,
+				9025E582167AD01C0014E161 /* TestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9025E544167ACE980014E161 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9025E545167ACE980014E161 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9025E556167ACE980014E161 /* SPViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9025E557167ACE980014E161 /* en */,
+			);
+			name = SPViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		9025E559167ACE980014E161 /* SPViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9025E55A167ACE980014E161 /* en */,
+			);
+			name = SPViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9025E55C167ACE980014E161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9025E55D167ACE980014E161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9025E55F167ACE980014E161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PatternLock/PatternLock-Prefix.pch";
+				INFOPLIST_FILE = "PatternLock/PatternLock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9025E560167ACE980014E161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PatternLock/PatternLock-Prefix.pch";
+				INFOPLIST_FILE = "PatternLock/PatternLock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9025E531167ACE970014E161 /* Build configuration list for PBXProject "PatternLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9025E55C167ACE980014E161 /* Debug */,
+				9025E55D167ACE980014E161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9025E55E167ACE980014E161 /* Build configuration list for PBXNativeTarget "PatternLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9025E55F167ACE980014E161 /* Debug */,
+				9025E560167ACE980014E161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9025E52E167ACE970014E161 /* Project object */;
+}
