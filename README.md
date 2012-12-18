@@ -2,6 +2,9 @@ Pattern Lock for iOS
 ========================
 <i> A simple but fully functional pattern lock sdk for iOS (similar to the android pattern lock) </i>
 
+![ScreenShot](http://www.pictureshoster.com/files/ngbk591w5pcz9gbuydg.png)
+
+
 * **no graphics or images**
 * **all colors and sizes are customizable**
 * **can enable closed-type(complex type) patterns, off by default**
