@@ -13,6 +13,10 @@ Pattern Lock for iOS
 
 ### How to Use
 
+### Cocoapods
+
+		pod 'PatternLock'
+
 #### init
 
 		- (id)initWithDelegate:(id)lockDelegate
