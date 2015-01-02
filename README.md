@@ -29,3 +29,7 @@ Pattern Lock for iOS
 **Do however you want to do with the match**
 
 **That's it !**
+
+Contact
+==========
+You can contact me at my email freesuraj@gmail.com for any questions.
