@@ -141,8 +141,17 @@
 	self.oldCellIndex = self.currentCellIndex;
 	NSInteger cellPos = [self indexForPoint:point];
 	
-	if(cellPos >=0 && cellPos != self.oldCellIndex)
-		[self.cellsInOrder addObject:@(self.currentCellIndex)];
+	if(cellPos >=0 && cellPos != self.oldCellIndex){
+		BOOL exists = false;
+	        for(int i = 0; i < cellsInOrder.count; i++) {
+	            if([[cellsInOrder objectAtIndex:i] integerValue] == self.currentCellIndex) {
+	                exists = true;
+	            }
+	        }
+	        
+	        if(!exists)
+	            [self.cellsInOrder addObject:@(self.currentCellIndex)];
+	}
 	
 	if(cellPos < 0 && self.oldCellIndex < 0) return;
 	
