@@ -13,7 +13,7 @@ Pattern Lock for iOS
 
 ### How to Use
 
-### Cocoapods
+### CocoaPods
 
 		pod 'PatternLock'
 
