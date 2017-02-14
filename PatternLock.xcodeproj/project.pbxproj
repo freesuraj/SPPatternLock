@@ -176,6 +176,11 @@
 				CLASSPREFIX = SP;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Suraj;
+				TargetAttributes = {
+					9025E536167ACE980014E161 = {
+						LastSwiftMigration = 0820;
+					};
+				};
 			};
 			buildConfigurationList = 9025E531167ACE970014E161 /* Build configuration list for PBXProject "PatternLock" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -311,10 +316,16 @@
 		9025E55F167ACE980014E161 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PatternLock/PatternLock-Prefix.pch";
 				INFOPLIST_FILE = "PatternLock/PatternLock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/PatternLock-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -322,10 +333,15 @@
 		9025E560167ACE980014E161 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PatternLock/PatternLock-Prefix.pch";
 				INFOPLIST_FILE = "PatternLock/PatternLock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/PatternLock-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -349,6 +365,7 @@
 				9025E560167ACE980014E161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

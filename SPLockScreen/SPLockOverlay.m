@@ -40,7 +40,7 @@
 			CGContextAddLineToPoint(context, line.toPoint.x, line.toPoint.y);
 			CGContextStrokePath(context);
 			
-			CGFloat nodeRadius = 14.0;
+			CGFloat nodeRadius = lineWidth * 2;
 			
 			CGRect fromBubbleFrame = CGRectMake(line.fromPoint.x- nodeRadius/2, line.fromPoint.y - nodeRadius/2, nodeRadius, nodeRadius);
 			CGContextSetFillColorWithColor(context, kLineGridColor.CGColor);
