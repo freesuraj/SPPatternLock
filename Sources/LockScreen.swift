@@ -23,31 +23,33 @@ class LockScreen: UIView {
     private var finalLines: [Line] = []
     private var cellsInOrder: [Int] = []
     
-    private var numberOfCircles: Int = 9
     private var allowClosedPattern: Bool = true
     
-    private var size: Int {
-        return Int(sqrt(Double(numberOfCircles)))
+    private var size: Int = 3
+    
+    private var numberOfCircles: Int {
+        return size*size
     }
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    typealias PatternHandlerBlock = ((Int) -> Void)
+    typealias PatternHandlerBlock = ((NSNumber) -> Void)
     var patternHandler: PatternHandlerBlock?
     
     /**
      Initializes the main lock screen
      
      - parameter frame: `CGRect` where the screen will be drawn
-     - parameter numberOfCircles: Total circles for the pattern lock (9 by default). numberOfCircles should be a perfect square, eg. 9 or 16.
+     - parameter size: Size of the lock screen. It will create grids of size X size. Default value is 3
      - parameter allowClosedPattern: If set to `true`, it allows for complicated pattern. Otherwise a circle can't be used twice for a pattern
+     - parameter handler: Callback to receive the user pattern
      - returns: Returns the Lock screen
      */
-    convenience init(frame: CGRect, numberOfCircles: Int = 9, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil) {
+    convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil) {
         self.init(frame: frame)
-        self.numberOfCircles = numberOfCircles
+        self.size = size
         self.allowClosedPattern = allowClosedPattern
         self.patternHandler = handler
         setNeedsDisplay()
@@ -60,7 +62,6 @@ class LockScreen: UIView {
     }
     
     func setupScreen() {
-        assert(numberOfCircles > 1 && sqrt(Double(numberOfCircles)).truncatingRemainder(dividingBy: 1.0) == 0, "Number of Items must be a perfect square and greater than 1")
         let grid = Double(min(frame.width, frame.height))/Double(2*size+1)
         let gap = grid
         let topOffset = grid
@@ -110,7 +111,7 @@ class LockScreen: UIView {
     /// MARK: Helpers
     
     func endPattern() {
-        patternHandler?(Int(uniqueIdOfCurrentPattern))
+        patternHandler?(NSNumber(value: uniqueIdOfCurrentPattern))
         resetScreen()
     }
     
