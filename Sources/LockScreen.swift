@@ -31,6 +31,18 @@ public class LockScreen: UIView {
         return size*size
     }
     
+    // Public configurable values
+    public struct Config {
+        public var lineWidth: CGFloat = 5
+        public var lineColor: UIColor = UIColor.white
+        public var lineEdgeColor: UIColor = UIColor.white
+        public var circleOuterRingColor: UIColor = UIColor.magenta
+        public var circleInnerRingColor: UIColor = UIColor.darkGray
+        public var circleHighlightColor: UIColor = UIColor.yellow
+    }
+    
+    public var config: Config = Config()
+    
     public required override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -44,13 +56,15 @@ public class LockScreen: UIView {
      - parameter frame: `CGRect` where the screen will be drawn
      - parameter size: Size of the lock screen. It will create grids of size X size. Default value is 3
      - parameter allowClosedPattern: If set to `true`, it allows for complicated pattern. Otherwise a circle can't be used twice for a pattern
+     - parameter config: Configuration for colors and line width, etc
      - parameter handler: Callback to receive the user pattern
      - returns: Returns the Lock screen
      */
-    public convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil) {
+    public convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, config: Config = Config(), handler: PatternHandlerBlock? = nil) {
         self.init(frame: frame)
         self.size = size
         self.allowClosedPattern = allowClosedPattern
+        self.config = config
         self.patternHandler = handler
         setNeedsDisplay()
         setupScreen()
@@ -69,6 +83,11 @@ public class LockScreen: UIView {
 
         for index in 0..<numberOfCircles {
             let circle = Circle(radius: CGFloat(radius))
+            circle.outerColor = config.circleOuterRingColor
+            circle.innercolor = config.circleInnerRingColor
+            circle.highlightColor = config.circleHighlightColor
+            circle.lineWidth = config.lineWidth
+            
             let row = index/size
             let col = index % size
             let x = (gap + radius) + (gap + 2*radius)*Double(col)
@@ -78,6 +97,10 @@ public class LockScreen: UIView {
             addSubview(circle)
         }
         patternView = PatternView(frame: CGRect(origin: .zero, size: frame.size))
+        patternView.lineWidth = config.lineWidth
+        patternView.lineColor = config.lineColor
+        patternView.linePointColor = config.lineEdgeColor
+        
         patternView?.isUserInteractionEnabled = false
         addSubview(patternView)
     }

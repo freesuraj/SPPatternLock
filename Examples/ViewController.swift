@@ -54,7 +54,10 @@ class ViewController: UIViewController {
         title = "\(size)x\(size) pattern lock"
         if let v = lockScreenView { v.removeFromSuperview() }
         let lockFrame = CGRect(origin: CGPoint(x: 0, y: complexSwitch.frame.maxY+10), size: CGSize(width: view.frame.width, height: view.frame.width))
-        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: allowComplex) { [weak self] pattern in
+        // Example of using config
+        var config = LockScreen.Config()
+        config.lineColor = UIColor.purple
+        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: allowComplex, config: config) { [weak self] pattern in
             self?.title = "\(pattern)"
         }
         view.addSubview(lockScreenView)
