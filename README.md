@@ -9,7 +9,7 @@ Pattern Lock for iOS
 ========================
 Revamped PatternLock for iOS written in Swift3.
 
-![ScreenShot](https://github.com/freesuraj/SPPatternLock/blob/Swift/Examples/patternLock.png?raw=true)
+![ScreenShot](https://github.com/freesuraj/SPPatternLock/blob/master/Examples/patternLock.png?raw=true)
 
 
 * **no graphics or images**
@@ -18,7 +18,7 @@ Revamped PatternLock for iOS written in Swift3.
 * **support for both iPhone and iPad**
 * **Easy to bring in and use**
 
-### Cocoapods
+### CocoaPods
 		pod 'PatternLock'
 ### Initialization
 
