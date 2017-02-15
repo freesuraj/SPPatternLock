@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     lazy var complexSwitch: UISwitch = {
         let _switch = UISwitch(frame: CGRect(x: 200, y: 120, width: 40, height: 50))
-        _switch.addTarget(self, action: #selector(onDrag), for: .valueChanged)
+        _switch.addTarget(self, action: #selector(onSwitch), for: .valueChanged)
         _switch.isOn = true
         return _switch
     }()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         title = "\(size)x\(size) pattern lock"
         if let v = lockScreenView { v.removeFromSuperview() }
         let lockFrame = CGRect(origin: CGPoint(x: 0, y: complexSwitch.frame.maxY+10), size: CGSize(width: view.frame.width, height: view.frame.width))
-        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: true) { [weak self] pattern in
+        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: allowComplex) { [weak self] pattern in
             self?.title = "\(pattern)"
         }
         view.addSubview(lockScreenView)

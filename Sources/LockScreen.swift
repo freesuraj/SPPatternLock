@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LockScreen: UIView {
+public class LockScreen: UIView {
     
     private let kSeed   = 23
     private let kAlter1 = 1234
@@ -31,11 +31,11 @@ class LockScreen: UIView {
         return size*size
     }
     
-    required override init(frame: CGRect) {
+    public required override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    typealias PatternHandlerBlock = ((NSNumber) -> Void)
+    public typealias PatternHandlerBlock = ((NSNumber) -> Void)
     var patternHandler: PatternHandlerBlock?
     
     /**
@@ -47,7 +47,7 @@ class LockScreen: UIView {
      - parameter handler: Callback to receive the user pattern
      - returns: Returns the Lock screen
      */
-    convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil) {
+    public convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil) {
         self.init(frame: frame)
         self.size = size
         self.allowClosedPattern = allowClosedPattern
@@ -57,7 +57,7 @@ class LockScreen: UIView {
         setupGestures()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
