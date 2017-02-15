@@ -7,9 +7,9 @@
 
 Pattern Lock for iOS
 ========================
-<i> A Revamped PatternLock for iOS written in Swift3. </i>
+Revamped PatternLock for iOS written in Swift3.
 
-![ScreenShot](http://www.pictureshoster.com/files/ngbk591w5pcz9gbuydg.png)
+![ScreenShot](https://github.com/freesuraj/SPPatternLock/blob/Swift/Examples/patternLock.png?raw=true)
 
 
 * **no graphics or images**
@@ -21,6 +21,7 @@ Pattern Lock for iOS
 ### Cocoapods
 		pod 'PatternLock'
 ### Initialization
+
 ```swift
 		/**
      Initializes the main lock screen
@@ -34,7 +35,9 @@ Pattern Lock for iOS
     convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil)
     ```
 
+
 ## About
+
 If you found this little tool useful, I'd love to hear about it. You can also follow me on Twitter at [@iosCook](https://twitter.com/ioscook)
 
 
