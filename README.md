@@ -33,9 +33,8 @@ Revamped PatternLock for iOS written in Swift3.
      - returns: Returns the Lock screen
      */
     convenience init(frame: CGRect, size: Int = 3, allowClosedPattern: Bool = true, handler: PatternHandlerBlock? = nil)
-    
-    ```
 
+```
 
 
 ### About
