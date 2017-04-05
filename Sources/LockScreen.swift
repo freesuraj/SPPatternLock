@@ -39,6 +39,9 @@ public class LockScreen: UIView {
         public var circleOuterRingColor: UIColor = UIColor.magenta
         public var circleInnerRingColor: UIColor = UIColor.darkGray
         public var circleHighlightColor: UIColor = UIColor.yellow
+        
+        // Public Initializer for Config
+        public init() {}
     }
     
     public var config: Config = Config()
