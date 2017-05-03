@@ -216,7 +216,7 @@ public class LockScreen: UIView {
     
     var uniqueIdOfCurrentPattern: String {
 
-        let stringRepresentation = cellsInOrder.map{"\($0)"}.reduce(""){$0+$1}//"0110"
+        let stringRepresentation = cellsInOrder.map{"\($0)"}.reduce(","){$0+$1}//"0110"
         return stringRepresentation
     }
     
