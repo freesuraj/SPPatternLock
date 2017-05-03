@@ -50,7 +50,7 @@ public class LockScreen: UIView {
         super.init(frame: frame)
     }
     
-    public typealias PatternHandlerBlock = ((String) -> Void)
+    public typealias PatternHandlerBlock = ((Double,[Int]) -> Void)
     var patternHandler: PatternHandlerBlock?
     
     /**
@@ -137,7 +137,7 @@ public class LockScreen: UIView {
     /// MARK: Helpers
     
     func endPattern() {
-        patternHandler?(uniqueIdOfCurrentPattern)
+        patternHandler?(uniqueIdOfCurrentPattern,cellsInOrder)
         resetScreen()
     }
     
@@ -214,10 +214,15 @@ public class LockScreen: UIView {
         return abs(cellA+cellB)*kAlter1 + abs(cellA-cellB)*kAlter2
     }
     
-    var uniqueIdOfCurrentPattern: String {
-
-        let stringRepresentation = cellsInOrder.map{"\($0)"}.reduce(","){$0+$1}//"0110"
-        return stringRepresentation
+    var uniqueIdOfCurrentPattern: Double {
+        var finalNum = 0.0
+        for index in 0..<cellsInOrder.count {
+            let base = cellsInOrder[index] + 1
+            let length = cellsInOrder.count - index - 1
+            let thisNum = Double(base) * pow(10, Double(length))
+            finalNum = finalNum + thisNum
+        }
+        return finalNum
     }
     
     func resetScreen() {
