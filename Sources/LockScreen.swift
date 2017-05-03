@@ -50,7 +50,7 @@ public class LockScreen: UIView {
         super.init(frame: frame)
     }
     
-    public typealias PatternHandlerBlock = ((NSNumber) -> Void)
+    public typealias PatternHandlerBlock = ((Double,[Int]) -> Void)
     var patternHandler: PatternHandlerBlock?
     
     /**
@@ -137,7 +137,7 @@ public class LockScreen: UIView {
     /// MARK: Helpers
     
     func endPattern() {
-        patternHandler?(NSNumber(value: uniqueIdOfCurrentPattern))
+        patternHandler?(uniqueIdOfCurrentPattern,cellsInOrder)
         resetScreen()
     }
     
@@ -173,8 +173,14 @@ public class LockScreen: UIView {
     func handlePan(at point: CGPoint) {
         oldCellIndex = currentCellIndex
         let cellPos = index(point) // This part will also change currentCellIndex
-        if cellPos >= 0 && cellPos != oldCellIndex {
+        if cellPos >= 0 && cellPos != oldCellIndex && allowClosedPattern == true  {
+            
             cellsInOrder.append(currentCellIndex)
+            
+        }else if cellPos >= 0 && cellPos != oldCellIndex && allowClosedPattern == false && cellsInOrder.count < size*size{
+            
+            cellsInOrder.append(currentCellIndex)
+
         }
         print(finalLines)
         if cellPos < 0 && oldCellIndex < 0 {

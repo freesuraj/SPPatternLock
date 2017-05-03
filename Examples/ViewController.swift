@@ -57,7 +57,9 @@ class ViewController: UIViewController {
         // Example of using config
         var config = LockScreen.Config()
         config.lineColor = UIColor.purple
-        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: allowComplex, config: config) { [weak self] pattern in
+        lockScreenView = LockScreen(frame: lockFrame, size: size, allowClosedPattern: allowComplex, config: config) { [weak self] (pattern, order) in
+            print(order.description)
+            print(pattern)
             self?.title = "\(pattern)"
         }
         view.addSubview(lockScreenView)
