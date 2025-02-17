@@ -40,7 +40,7 @@ Revamped PatternLock for iOS written in Swift3.
 
 ### About
 
-If you found this little tool useful, I'd love to hear about it. You can also follow me on Twitter at [@iosCook](https://twitter.com/ioscook)
+If you found this little tool useful, I'd love to hear about it. You can also follow me on Twitter at [@iosCook](https://twitter.com/realSurajP)
 
 
 [![GitHub followers](https://img.shields.io/github/followers/freesuraj.svg?style=social&label=Follow)](https://github.com/freesuraj)
